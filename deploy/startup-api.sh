@@ -5,6 +5,6 @@ VER=v22.20.0
 cd /usr/local
 curl -fsSL https://nodejs.org/dist/$VER/node-$VER-linux-x64.tar.xz | tar -xJ --strip-components=1
 apt-get install -y git
-rm -rf /opt/notely && git clone REPO_URL /opt/notely
+rm -rf /opt/notely && git clone -b exercise1 REPO_URL /opt/notely
 cd /opt/notely/backend && npm install
 PORT=3000 nohup node src/index.js > /var/log/notely-api.log 2>&1 &
